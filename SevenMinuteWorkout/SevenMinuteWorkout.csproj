@@ -57,6 +57,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -65,19 +67,24 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\SevenMinuteWorkout\js\directives.js" />
-    <Content Include="app\SevenMinuteWorkout\js\filters.js" />
-    <Content Include="app\SevenMinuteWorkout\js\services.js" />
-    <Content Include="app\SevenMinuteWorkout\js\workout.js" />
+    <Content Include="app\app.js" />
+    <Content Include="app\SevenMinuteWorkout\scripts\directives.js" />
+    <Content Include="app\SevenMinuteWorkout\scripts\filters.js" />
+    <Content Include="app\SevenMinuteWorkout\scripts\services.js" />
+    <Content Include="app\SevenMinuteWorkout\scripts\sevenMinuteWorkoutModule.js" />
+    <Content Include="app\SevenMinuteWorkout\scripts\workout.js" />
     <Content Include="index.html" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\css\" />
-    <Folder Include="app\img\" />
+    <Folder Include="css\" />
+    <Folder Include="img\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
