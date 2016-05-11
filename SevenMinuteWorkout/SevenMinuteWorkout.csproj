@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\SevenMinuteWorkout\partials\descriptionPanel.html" />
     <Content Include="app\SevenMinuteWorkout\partials\workout.html" />
     <Content Include="app\partials\finish.html" />
     <Content Include="app\partials\start.html" />
