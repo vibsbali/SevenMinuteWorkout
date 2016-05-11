@@ -58,29 +58,29 @@
             vm.currentExerciseDuration = 0;
 
             $interval(function() {
-                ++vm.currentExerciseDuration;
-            }, 1000, vm.currentExercise.duration);
-            //.then(function () {
-            //    var next = getNextExercise(exercisePlan);
-            //    if (next) {
-            //        startExercise(next);
-            //    }
-            //    else {
-            //        console.log("Workout complete!");
-            //    }
-            //});
+                    ++vm.currentExerciseDuration;
+                }, 1000, vm.currentExercise.duration)
+                .then(function() {
+                    //get next excercise
+                    var nextExercise = getNextExercise(exercisePlan);
+                if (nextExercise) {
+                    startExercise(nextExercise);
+                } else {
+                    console.log("Workout Complete!");
+                }
+            });
         };
 
-        $scope.$watch("vm.currentExerciseDuration", function (nVal) {
-            if (nVal == vm.currentExercise.duration) {
-                var next = getNextExercise(vm.currentExercise);
-                if (next) {
-                    startExercise(next);
-                } else {
-                    console.log("Workout complete!");
-                }
-            }
-        });
+        //$scope.$watch("vm.currentExerciseDuration", function (nVal) {
+        //    if (nVal == vm.currentExercise.duration) {
+        //        var next = getNextExercise(vm.currentExercise);
+        //        if (next) {
+        //            startExercise(next);
+        //        } else {
+        //            console.log("Workout complete!");
+        //        }
+        //    }
+        //});
 
         var getNextExercise = function (currentExercisePlan) {
             var nextExercise = null;
