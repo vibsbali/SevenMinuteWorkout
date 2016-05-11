@@ -16,4 +16,21 @@
             </div>
         </div>
     </div>
+    
+    <script type="text/ng-template" id="video-panel.html">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Videos</h3>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div ng-repeat="video in vm.currentExercise.details.related.videos">
+                <iframe width="330" height="220" src="{{video}}" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </script>
+    <div id="video-panel" class="col-sm-2" ng-include="'video-panel.html'">
+        
+    </div>
+   
 </div>
