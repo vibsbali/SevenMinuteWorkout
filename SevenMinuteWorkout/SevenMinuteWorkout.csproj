@@ -72,7 +72,7 @@
     <Content Include="app\SevenMinuteWorkout\scripts\filters.js" />
     <Content Include="app\SevenMinuteWorkout\scripts\services.js" />
     <Content Include="app\SevenMinuteWorkout\scripts\sevenMinuteWorkoutModule.js" />
-    <Content Include="app\SevenMinuteWorkout\scripts\workout.js" />
+    <Content Include="app\SevenMinuteWorkout\scripts\workoutController.js" />
     <Content Include="index.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
