@@ -1,5 +1,5 @@
 ﻿"use strict";
 
 (function () {
-    angular.module("7minWorkout", []);
+    angular.module("app", ["7minWorkout"]);
 }());
