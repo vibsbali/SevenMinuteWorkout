@@ -2,7 +2,7 @@
 "use strict";
 
 (function () {
-    angular.module("7minWorkout").controller("WorkoutController", ["$interval","$scope", function ($interval,$scope) {
+    angular.module("7minWorkout").controller("WorkoutController", ["$interval","$location", function ($interval, $location) {
 
         var vm = this;
 
@@ -66,7 +66,7 @@
                 if (nextExercise) {
                     startExercise(nextExercise);
                 } else {
-                    console.log("Workout Complete!");
+                    $location.path("/finish");
                 }
             });
         };

@@ -60,6 +60,21 @@
     <Content Include="app\SevenMinuteWorkout\partials\workout.html" />
     <Content Include="app\SevenMinuteWorkout\partials\finish.html" />
     <Content Include="app\SevenMinuteWorkout\partials\start.html" />
+    <Content Include="img\crunches.png" />
+    <Content Include="img\finish.png" />
+    <Content Include="img\highknees.png" />
+    <Content Include="img\JumpingJacks.png" />
+    <Content Include="img\lunges.png" />
+    <Content Include="img\Plank.png" />
+    <Content Include="img\Pushup.png" />
+    <Content Include="img\pushupNRotate.png" />
+    <Content Include="img\rest.png" />
+    <Content Include="img\sideplank.png" />
+    <Content Include="img\squat.png" />
+    <Content Include="img\start.png" />
+    <Content Include="img\stepUpOntoChair.png" />
+    <Content Include="img\tricepdips.png" />
+    <Content Include="img\wallsit.png" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
@@ -108,9 +123,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="img\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

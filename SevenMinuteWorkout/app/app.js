@@ -2,7 +2,7 @@
 
 (function () {
     angular.module("app", ["ngRoute", "7minWorkout"])
-        .config(function($routeProvider) {
+        .config(function ($routeProvider) {
             $routeProvider.when("/start", {
                 templateUrl: "/app/SevenMinuteWorkout/partials/start.html"
             }).when("/workout", {
