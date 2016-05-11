@@ -1,10 +1,24 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app="7minWorkout">
 <head>
-    <title></title>
+    <title>7 Minute Workout</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/app.css" rel="stylesheet" />
 </head>
 <body>
-
+    <div ng-controller="WorkoutController as vm">
+        <div class="navbar navbar-default navbar-fixed-top top-navbar">
+            <div class="container app-container">
+                <div class="navbar-header">
+                    <h1>7 Minute Workout</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content app-container">
+            <pre>Current Exercise: {{vm.currentExercise | json}}</pre>
+            <pre>Time Left: {{vm.currentExercise.duration - vm.currentExerciseDuration}}</pre>
+        </div>
+    </div>
 
     <script src="Scripts/angular.js"></script>
     <!--Base Libraries-->
