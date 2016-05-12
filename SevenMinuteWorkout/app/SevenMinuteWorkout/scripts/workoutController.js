@@ -124,6 +124,7 @@
                 restBetweenExercises: 10
             });
 
+            //We are pushing an anonymous object
             workout.exercises.push({
                 details: new Exercise({
                     name: "jumpingJacks",

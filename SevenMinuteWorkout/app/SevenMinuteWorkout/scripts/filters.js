@@ -3,6 +3,7 @@
 (function () {
     angular.module("7minWorkout")
         .filter("secondsToTime", function () {
+            //returns a factory object
             return function (input) {
                 var sec = parseInt(input, 10);
                 if (isNaN(sec)) {
