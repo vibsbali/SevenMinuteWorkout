@@ -84,6 +84,12 @@
                     //get next excercise
                     var nextExercise = getNextExercise(exercisePlan);
                     if (nextExercise) {
+                        //This is to check if next excercise is rest excercise
+                        if (nextExercise == restExercise) {
+                            vm.upcomingExercise = workoutPlan.exercises[0];
+                        } else {
+                            vm.upcomingExercise = "";
+                        }
                         startExercise(nextExercise);
                     } else {
                         $location.path("/finish");
@@ -138,7 +144,7 @@
                             As you are moving your legs outward, you should raise your arms up over your head; arms should be slightly bent throughout the entire in-air movement.\
                             Your feet should land shoulder width or wider as your hands meet above your head with arms slightly bent"
                 }),
-                duration: 30
+                duration: 5
             });
             workout.exercises.push({
                 details: new Exercise({
@@ -150,7 +156,7 @@
                     procedure: "Place your back against a wall with your feet shoulder width apart and a little ways out from the wall.\
                               Then, keeping your back against the wall, lower your hips until your knees form right angles. "
                 }),
-                duration: 30
+                duration: 5
             });
             workout.exercises.push({
                 details: new Exercise({
@@ -163,7 +169,7 @@
                               Keeping the body straight, lower body to the ground by bending arms at the elbows. \
                               Raise body up off the ground by extending the arms."
                 }),
-                duration: 30
+                    duration: 5
             });
             workout.exercises.push({
                 details: new Exercise({
@@ -179,7 +185,7 @@
                               Curl up and forward so that your head, neck, and shoulder blades lift off the floor.\
                               Hold for a moment at the top of the movement and then lower slowly back down."
                 }),
-                duration: 30
+                    duration: 5
             });
             workout.exercises.push({
                 details: new Exercise({
@@ -193,7 +199,7 @@
                               Step up onto the seat with one foot, pressing down while bringing your other foot up next to it. \
                               Step back with the leading foot and bring the trailing foot down to finish one step-up."
                 }),
-                duration: 30
+                duration: 5
             });
             workout.exercises.push({
                 details: new Exercise({
@@ -208,7 +214,7 @@
                               Lower down so your thighs are parallel to the floor, with your knees over your ankles. Press your weight back into your heels.\
                               Keep your body tight, and push through your heels to bring yourself back to the starting position."
                 }),
-                duration: 30
+                duration: 5
             });
             workout.exercises.push({
                 details: new Exercise({
@@ -222,7 +228,7 @@
                               Without moving your legs, bring your glutes forward off the chair.\
                               Steadily lower yourself. When your elbows form 90 degrees angles, push yourself back up to starting position."
                 }),
-                duration: 30
+                duration: 5
             });
             workout.exercises.push({
                 details: new Exercise({
@@ -236,7 +242,7 @@
                               Your elbows should be directly beneath your shoulders, and your body should form a straight line from head to feet.\
                               Hold this position."
                 }),
-                duration: 30
+                duration: 5
             });
             workout.exercises.push({
                 details: new Exercise({
@@ -248,7 +254,7 @@
                     procedure: "Start standing with feet hip-width apart. \
                               Do inplace jog with your knees lifting as much as possible towards your chest."
                 }),
-                duration: 30
+                duration: 5
             });
             workout.exercises.push({
                 details: new Exercise({
@@ -264,7 +270,7 @@
                               Return to starting position.\
                               Repeat with your alternate leg."
                 }),
-                duration: 30
+                duration: 5
             });
             workout.exercises.push({
                 details: new Exercise({
@@ -276,7 +282,7 @@
                     procedure: "Assume the classic pushup position, but as you come up, rotate your body so your right arm lifts up and extends overhead.\
                               Return to the starting position, lower yourself, then push up and rotate till your left hand points toward the ceiling."
                 }),
-                duration: 30
+                duration: 5
             });
             workout.exercises.push({
                 details: new Exercise({
@@ -290,7 +296,7 @@
                               With your abdominals gently contracted, lift your hips off the floor, maintaining the line.\
                               Keep your hips square and your neck in line with your spine. Hold the position."
                 }),
-                duration: 30
+                duration: 5
             });
             return workout;
         };
