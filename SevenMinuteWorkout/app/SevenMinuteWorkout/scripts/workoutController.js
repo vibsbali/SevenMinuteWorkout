@@ -2,7 +2,7 @@
 "use strict";
 
 (function () {
-    angular.module("7minWorkout").controller("WorkoutController", ["$interval","$location", function ($interval, $location) {
+    angular.module("7minWorkout").controller("WorkoutController", ["$interval", "$location", function ($interval, $location) {
 
         var vm = this;
 
@@ -13,6 +13,18 @@
             this.title = args.title;
             this.exercises = [];
             this.restBetweenExercises = args.restBetweenExercises;
+
+            this.totalWorkoutDuration = function () {
+                if (this.exercises.length == 0) {
+                    return 0;
+                }
+
+                var total = 0;
+                for (var i = 0; i < this.exercises.length; i++) {
+                    total += this.exercises[i].duration;
+                }
+                return this.restBetweenExercises * (this.exercises.length - 1) + total;
+            }
         }
 
 
@@ -40,6 +52,9 @@
         //This Method allows us to start a workout Starts the workout 
         var startWorkout = function () {
             workoutPlan = createWorkout();  //Returns a workout plan
+
+            vm.workoutTimeRemaining = workoutPlan.totalWorkoutDuration();
+
             restExercise = {
                 details: new Exercise({
                     name: "rest",
@@ -49,6 +64,11 @@
                 }),
                 duration: workoutPlan.restBetweenExercises
             };
+
+            $interval(function () {
+                vm.workoutTimeRemaining = vm.workoutTimeRemaining - 1;
+            }, 1000, vm.workoutTimeRemaining);
+
             startExercise(workoutPlan.exercises.shift());
         };
 
@@ -57,18 +77,18 @@
             vm.currentExercise = exercisePlan;
             vm.currentExerciseDuration = 0;
 
-            $interval(function() {
-                    ++vm.currentExerciseDuration;
-                }, 1000, vm.currentExercise.duration)
-                .then(function() {
+            $interval(function () {
+                ++vm.currentExerciseDuration;
+            }, 1000, vm.currentExercise.duration)
+                .then(function () {
                     //get next excercise
                     var nextExercise = getNextExercise(exercisePlan);
-                if (nextExercise) {
-                    startExercise(nextExercise);
-                } else {
-                    $location.path("/finish");
-                }
-            });
+                    if (nextExercise) {
+                        startExercise(nextExercise);
+                    } else {
+                        $location.path("/finish");
+                    }
+                });
         };
 
         //$scope.$watch("vm.currentExerciseDuration", function (nVal) {
