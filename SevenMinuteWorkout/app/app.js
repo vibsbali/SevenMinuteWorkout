@@ -1,7 +1,7 @@
 ﻿"use strict";
 
 (function () {
-    angular.module("app", ["ngRoute", "7minWorkout"])
+    angular.module("app", ["ngSanitize","ngRoute", "7minWorkout"])
         .config(function ($routeProvider, $sceDelegateProvider) {
             
             $routeProvider.when("/start", {

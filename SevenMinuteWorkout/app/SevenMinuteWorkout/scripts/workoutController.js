@@ -60,6 +60,7 @@
                     name: "rest",
                     title: "Relax!",
                     description: "Relax a bit!",
+                    procedure: "Breath In and Out",
                     image: "img/rest.png",
                 }),
                 duration: workoutPlan.restBetweenExercises
