@@ -8,7 +8,7 @@
                 templateUrl: "/app/partials/start.html"
             }).when("/workout", {
                 templateUrl: "/app/SevenMinuteWorkout/partials/workout.html",
-                controller: "WorkoutController as vm"
+                controller: "WorkoutController"
             }).when("/finish", {
                 templateUrl: "/app/partials/finish.html"
             }).otherwise({
