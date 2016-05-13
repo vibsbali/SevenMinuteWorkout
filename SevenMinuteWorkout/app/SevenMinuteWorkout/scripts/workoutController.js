@@ -138,6 +138,7 @@
                     title: "Jumping Jacks",
                     description: "A jumping jack or star jump, also called side-straddle hop is a physical jumping exercise.",
                     image: "img/JumpingJacks.png",
+                    nameSound: "/app/resources/jumpingjacks.wav",
                     videos: ["//www.youtube.com/embed/dmYwZH_BNd0", "//www.youtube.com/embed/BABOdJ-2Z6o", "//www.youtube.com/embed/c4DAnQ6DtF8"],
                     procedure: "Assume an erect position, with feet together and arms at your side.\
                             Slightly bend your knees, and propel yourself a few inches into the air.\
@@ -153,6 +154,7 @@
                     title: "Wall Sit",
                     description: "A wall sit, also known as a Roman Chair, is an exercise done to strengthen the quadriceps muscles.",
                     image: "img/wallsit.png",
+                    nameSound: "/app/resources/wallsit.wav",
                     videos: ["//www.youtube.com/embed/y-wV4Venusw", "//www.youtube.com/embed/MMV3v4ap4ro"],
                     procedure: "Place your back against a wall with your feet shoulder width apart and a little ways out from the wall.\
                               Then, keeping your back against the wall, lower your hips until your knees form right angles. "
@@ -165,6 +167,7 @@
                     title: "Push Up",
                     description: "A push-up is a common exercise performed in a prone position by raising and lowering the body using the arms",
                     image: "img/Pushup.png",
+                    nameSound: "/app/resources/pushups.wav",
                     videos: ["//www.youtube.com/embed/Eh00_rniF8E", "//www.youtube.com/embed/ZWdBqFLNljc", "//www.youtube.com/embed/UwRLWMcOdwI", "//www.youtube.com/embed/ynPwl6qyUNM", "//www.youtube.com/embed/OicNTT2xzMI"],
                     procedure: "Lie prone on the ground with hands placed as wide or slightly wider than shoulder width. \
                               Keeping the body straight, lower body to the ground by bending arms at the elbows. \
@@ -178,6 +181,7 @@
                     title: "Abdominal Crunches",
                     description: "The basic crunch is a abdominal exercise in a strength-training program.",
                     image: "img/crunches.png",
+                    nameSound: "/app/resources/crunches.wav",
                     videos: ["//www.youtube.com/embed/Xyd_fa5zoEU", "//www.youtube.com/embed/MKmrqcoCZ-M"],
                     procedure: "Lie on your back with your knees bent and feet flat on the floor, hip-width apart.\
                               Place your hands behind your head so your thumbs are behind your ears.\
@@ -194,6 +198,7 @@
                     title: "Step Up Onto Chair",
                     description: "Step exercises are ideal for building muscle in your lower body.",
                     image: "img/stepUpOntoChair.png",
+                    nameSound: "/app/resources/wallsit.wav",
                     videos: ["//www.youtube.com/embed/aajhW7DD1EA"],
                     procedure: "Position your chair in front of you.\
                               Stand with your feet about hip width apart, arms at your sides.\
